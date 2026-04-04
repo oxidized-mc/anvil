@@ -12,10 +12,10 @@ keywords     = ["minecraft", "oxidized-mc"]
 categories   = ["game-development"]
 
 [dependencies]
-oxidized-nbt      = { version = "0.1" }
-oxidized-types    = { version = "0.1" }
-oxidized-registry = { version = "0.1" }
-oxidized-chunks   = { version = "0.1" }
+oxidized-nbt         = { git = "https://github.com/oxidized-mc/nbt.git" }
+oxidized-types       = { git = "https://github.com/oxidized-mc/types.git" }
+oxidized-registry    = { git = "https://github.com/oxidized-mc/registry.git" }
+oxidized-chunks      = { git = "https://github.com/oxidized-mc/chunks.git" }
 thiserror         = "2"
 tokio             = { version = "1", features = ["rt"] }
 tracing           = "0.1"
@@ -55,9 +55,17 @@ cast_possible_truncation   = "allow"
 cast_sign_loss             = "allow"
 cast_possible_wrap         = "allow"
 
-[patch.crates-io]
-oxidized-nbt      = { path = "../nbt" }
-oxidized-types    = { path = "../types" }
+[patch."https://github.com/oxidized-mc/nbt.git"]
+oxidized-nbt = { path = "../nbt" }
+
+[patch."https://github.com/oxidized-mc/types.git"]
+oxidized-types = { path = "../types" }
+
+[patch."https://github.com/oxidized-mc/registry.git"]
 oxidized-registry = { path = "../registry" }
-oxidized-chunks   = { path = "../chunks" }
-oxidized-codec    = { path = "../codec" }
+
+[patch."https://github.com/oxidized-mc/chunks.git"]
+oxidized-chunks = { path = "../chunks" }
+
+[patch."https://github.com/oxidized-mc/codec.git"]
+oxidized-codec = { path = "../codec" }
