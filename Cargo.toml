@@ -69,3 +69,4 @@ oxidized-chunks = { path = "../chunks" }
 
 [patch."https://github.com/oxidized-mc/codec.git"]
 oxidized-codec = { path = "../codec" }
+
