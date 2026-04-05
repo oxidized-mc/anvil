@@ -52,7 +52,7 @@ impl CompressionType {
 
 /// Compresses data using Zlib at the given compression level.
 ///
-/// Uses level 4 by default for a good speed/ratio tradeoff (see ADR-015).
+/// Uses level 4 by default for a good speed/ratio tradeoff.
 ///
 /// # Errors
 ///
